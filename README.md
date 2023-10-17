@@ -1,46 +1,67 @@
-# Getting Started with Create React App
+# Dog Image Viewer - Deliveristo Challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome in the my Dog Image Viewer app repository. This app is a challenge for Deliveristo.
 
-## Available Scripts
+## How to run the app
 
-In the project directory, you can run:
+Follow these simple steps to run the app on your computer:
 
-### `yarn start`
+1. **Clone the repository**:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+    ```bash
+    git clone https://github.com/ndrSaba/Challenge.git
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+2. **Install the dependencies**:
 
-### `yarn test`
+    ```bash
+    cd Challenge
+    yarn
+    ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. **Run the app**:
 
-### `yarn build`
+    ```bash
+    yarn start
+    ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## How to use the app
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The app is very simple to use. If you click on the button "Select a Breed" you will see a list of Breeds. If you click on one of them, you will see a random image of a dog of that breed. 
+If there is one of more sub-breeds, you will see a list of them under the random image. If you click on one of them, you will see a random image of a dog of that sub-breed.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## How the app works
 
-### `yarn eject`
+The app is on a single page and it is composed by three components: `Content`, `Dropdown`, `ImageBox`, `ProgressBar` and `SubBreeds`. The `Content` component is the main component and it contains the other components. The `DropDown` component is a button that, when clicked, shows a list of breeds. The `ImageBox` component is a component that shows a random image of a dog of a specific breed. 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+There are 3 Custom Hooks in the `Content` component: `LoadBreeds`, `LoadSubBreeds` and `GenerateDogs`.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### LoadBreeds
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+The `LoadBreeds` Custom Hook is used to load the breeds. It is called when the app is loaded and when the user clicks on the button "Select a Breed". It returns an array of breeds.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### LoadSubBreeds
 
-## Learn More
+The `LoadSubBreeds` Custom Hook is used to load the sub-breeds. It is called when the user clicks on a breed. If the breed has one or more sub-breeds, it returns an array of sub-breeds.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### GenerateDogs
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The `GenerateDogs` Custom Hook is used to generate the random images of the dogs. It is called when the user clicks on a breed or on a sub-breed. It returns an array of random images of dogs, the loading state and the error state.
+
+## How the app is tested
+
+The app is tested with Jest and React Testing Library. There are 3 test files: `Content.test.js`, `Dropdown.test.js`,  `ImageBox.test.js`, `ProgressBar.test.js` and `SubBreeds.test.js` . 
+
+### How to run the tests
+
+To run the test you have to run the command `yarn test` in the terminal.
+
+
+## List of technologies used
+
+- [React](https://reactjs.dev/)
+- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
+- [Dog API](https://dog.ceo/dog-api/)
+
+## Author
+
+- **Andrea Sabato** - [ndrSaba](https://github.com/ndrSaba)
