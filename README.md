@@ -49,7 +49,7 @@ The `GenerateDogs` Custom Hook is used to generate the random images of the dogs
 
 ## How the app is tested
 
-The app is tested with Jest and React Testing Library. There are 3 test files: `Content.test.js`, `Dropdown.test.js`,  `ImageBox.test.js`, `ProgressBar.test.js` and `SubBreeds.test.js` . 
+The app is tested with Jest and React Testing Library. There are 3 test files: `Content.test.ts`, `Dropdown.test.ts`,  `ImageBox.test.ts`, `ProgressBar.test.ts` and `SubBreeds.test.ts` . 
 
 ### How to run the tests
 
