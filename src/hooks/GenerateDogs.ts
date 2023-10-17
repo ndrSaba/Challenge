@@ -47,7 +47,11 @@ const GenerateDogs = ({ breed, subBreed }: GenerateDogsProps) => {
         setErr(error.message);
         console.error(error);
       } finally {
-        setLoading(false);
+
+        // I'm simulating a delay just to show the funny loading indicator
+        setTimeout(() => {
+          setLoading(false);
+        }, 2500);
       }
     };
 

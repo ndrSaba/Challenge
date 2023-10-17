@@ -31,18 +31,16 @@ function Content() {
                 {loading && <ProgressBar />}
 
                 <div className="image-container">
-                    {dogImage ? (
-                        <ImageBox imageUrl={dogImage} caption={selectedBreed} subCaption={selectedSubBreed} error={err} />)
-                        : (<div className="image-container mydog">
-                            <p>Or enjoy my dog</p>
-                            <ImageBox imageUrl={myDog} caption="She's Birba - Jack Russell Terrier" />
-                        </div>)}
+                    {dogImage && !loading && <ImageBox imageUrl={dogImage} caption={selectedBreed} subCaption={selectedSubBreed} error={err} />}
+                    {!loading && !dogImage && <div className="image-container mydog">
+                        <p>Or enjoy my dog</p>
+                        <ImageBox imageUrl={myDog} caption="She's Birba - Jack Russell Terrier" />
+                    </div>}
                 </div>
                 {subBreeds.length > 0 &&
                     <div className="subbreeds-container">
                         <SubBreeds subBreeds={subBreeds} setSelectedSubBreed={setSelectedSubBreed} />
                     </div>}
-
             </div>
         </div>
     );
