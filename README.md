@@ -14,7 +14,7 @@ Follow these simple steps to run the app on your computer:
 2. **Install the dependencies**:
 
     ```bash
-    cd Challenge
+    cd Challenge just to be sure you are in a correct folder
     yarn
     ```
 
