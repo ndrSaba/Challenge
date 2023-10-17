@@ -1,0 +1,99 @@
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    z-index: -1;
+    width: 120px;
+}
+
+.subBreedButton{
+    background-color: #308233;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    max-height: 20rem;
+    overflow-y: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    top: 0;
+    left: 90%;
+    z-index: 2;
+}
+
+.dropdown-content .menu {
+    position: relative; 
+}
+
+.menu-item.active {
+    background-color: rgb(255, 255, 255);
+}
+
+.sub-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 160px; 
+    max-height: 20rem;
+    overflow-y: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 3; 
+    top: 0;
+    left: 100%; 
+    padding: 0 2px;
+}
+
+.sub-dropdown-content button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+    background-color: #f9f9f9;
+    border: none;
+    cursor: pointer;
+}
+
+
+.dropdown-content button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+    background-color: #efefef;
+    border: none;
+    cursor: pointer;
+}
+
+
+.show {
+    display: block;
+}
+
+
+.menu-item.active .sub-dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .sub-dropdown-content {
+    display: block;
+    top: 250%;
+    left: -50%;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .dropdown-content {
+        left: 0; 
+        width: 100%; 
+        top: 100%;
+    }
+}
