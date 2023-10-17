@@ -13,12 +13,16 @@ Follow these simple steps to run the app on your computer:
 
 2. **Install the dependencies**:
 
+    select the correct folder
     ```bash
-    cd Challenge just to be sure you are in a correct folder
+    cd Challenge
+    ```
+    install the dependencies
+    ```bash
     yarn
     ```
 
-3. **Run the app**:
+4. **Run the app**:
 
     ```bash
     yarn start
